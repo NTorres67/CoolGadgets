@@ -1,0 +1,185 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: row;
+    margin: 0;
+}
+ 
+/*===== Nav Bar =====*/
+
+nav.col-1 {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background: #D7E8D4;
+    flex: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*===== Main =====*/
+
+div.col-2 {
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+}
+
+main.content {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+main.content > article {
+    display; flex;
+    width: 100%;
+    flex: 3;
+    min-height: 60vh;
+}
+
+/*personal photo*/
+
+main.content > aside {
+    display: flex;
+    width: 100%;
+    background: beige;
+    flex: 1;
+    }
+
+.carousel {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    /*margin-top: -2px;*/
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+    .carousel-item img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+    }
+
+.carousel-control {
+    background: rgba(0, 0, 0, 0.28);
+    /*border-radius: 50%;*/
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+    .carousel-control.prev {
+        left: 2%;
+    }
+
+    .carousel-control.next {
+        right: 2%;
+    }
+
+    .carousel-control:hover {
+        background: rgba(0, 0, 0, 0.8);
+        color: #aaaaaa;
+    }
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+/*#carousel-3:checked ~ .control-3*/ {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+    .carousel-indicators li {
+        display: inline-block;
+        margin: 0 5px;
+    }
+
+.carousel-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+    .carousel-bullet:hover {
+        color: #aaaaaa;
+    }
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #428bca;
+}
+
+#title {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+/*.card width: 600px margin: 40px auto background-color: #F7F7E9 color: #444 overflow: hidden // clearfix box-shadow: 5px 5px 0 0 #aaa h1 margin: 0 padding: 20px text-align: center font: family: Roboto Slab weight: 400 background-color: #4DD65F animation: fadein 1.2s img float: left width: 200px height: 200px margin: 20px position: relative z-index: 1 animation: grow 0.6s .bio position: relative margin: 20px font-family: Merriweather Sans animation: slidein 1.2s @keyframes fadein from color: hsla(0, 0, 0, 0) to color: inherit @keyframes grow from transform: scale(0) 80% transform: scale(1.1) to transform: scale(1) @keyframes slidein from opacity: 0 49.9% opacity: 0 50% left: -240px to left: 0 .comment font: family: Merriweather Sans size: 12px color: #ddd text-align: center*/
+
+
+/* ===== Header / Footer =====*/
+header, footer {
+    display: flex;
+    background: rgb(51, 204, 255);
+    height: 20vh;
+}
+
+header, footer, article, nav, aside {
+    padding: 1em;
+}
